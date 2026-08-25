@@ -1,7 +1,7 @@
 {
   "name": "Flutter Ultimate Workspace",
   "image": "ghcr.io/cirruslabs/flutter:stable",
-  "postCreateCommand": "flutter config --enable-web && flutter pub upgrade --major-versions",
+  "postCreateCommand": "git config --global --add safe.directory '*' && flutter channel stable && flutter upgrade --force && flutter config --enable-web && flutter pub upgrade --major-versions",
   "customizations": {
     "vscode": {
       "extensions": [
