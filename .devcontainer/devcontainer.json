@@ -1,12 +1,7 @@
 {
-  "name": "Flutter & Android Advanced Workspace",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "17"
-    }
-  },
-  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "name": "Flutter Ultimate Workspace",
+  "image": "ghcr.io/cirruslabs/flutter:stable",
+  "postCreateCommand": "flutter config --enable-web && flutter pub upgrade --major-versions",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -14,7 +9,6 @@
         "dart-code.dart-code"
       ],
       "settings": {
-        "dart.flutterSdkPath": "/home/vscode/flutter",
         "editor.formatOnSave": true
       }
     }
