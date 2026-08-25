@@ -1,7 +1,8 @@
 {
-  "name": "Flutter Ultimate Workspace",
-  "image": "ghcr.io/cirruslabs/flutter:stable",
-  "postCreateCommand": "git config --global --add safe.directory '*' && flutter channel stable && flutter upgrade --force && flutter config --enable-web && flutter pub upgrade --major-versions",
+  "name": "Flutter IDX Replacement Workspace",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -9,8 +10,10 @@
         "dart-code.dart-code"
       ],
       "settings": {
+        "dart.flutterSdkPath": "/home/vscode/flutter",
         "editor.formatOnSave": true
       }
     }
-  }
+  },
+  "postCreateCommand": "flutter pub upgrade --major-versions"
 }
